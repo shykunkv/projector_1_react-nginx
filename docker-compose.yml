@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  nginx-react:
+    container_name: nginx-react
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    networks:
+      - local-network
+
+networks:
+  local-network:
+    name: "local-network"
